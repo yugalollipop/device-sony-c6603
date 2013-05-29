@@ -14,6 +14,8 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <remote  name="sony" fetch="git://github.com/sonyxperiadev/" />
+<remote  name="pabx" fetch="git://github.com/adrian-bl-yuga/" />
+<remote  name="github" fetch="git://github.com/" />
 
 <remove-project name="platform/hardware/qcom/camera" />
 <remove-project name="platform/hardware/qcom/display" />
@@ -23,11 +25,20 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/hardware/qcom/power" />
 <remove-project name="platform/hardware/qcom/sensors" />
 <remove-project name="platform/hardware/invensense" />
+<!-- changed repos //-->
+<remove-project name="platform/hardware/libhardware" />
+<remove-project name="platform/frameworks/native" />
 
-<project path="device/sony/lagan" name="device-sony-lagan" groups="device" remote="sony" revision="master" />
-<project path="device/sony/c6603" name="device-sony-c6603" groups="device" remote="sony" revision="master" />
+<project path="hardware/libhardware" name="android_hardware_libhardware" remote="pabx" revision="jb42" />
+<project path="frameworks/native"    name="android_frameworks_native"    remote="pabx" revision="jb42" />
+<project path="kernel/sony/k253" name="kernel_253" remote="pabx" revision="master" />
+<project path="device/sony/lagan" name="device-sony-lagan" groups="device" remote="pabx" revision="master" />
+<project path="device/sony/c6603" name="device-sony-c6603" groups="device" remote="pabx" revision="master" />
 <project path="vendor/sony/dash" name="DASH.git" groups="device" revision="master" remote="sony" />
+<project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="github" revision="cm-10.1" />
+
 </manifest>
+
 ```
 
 Download the zip file with vendor binaries from:
