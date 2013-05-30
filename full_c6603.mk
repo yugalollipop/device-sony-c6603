@@ -14,6 +14,7 @@
 
 $(call inherit-product, device/sony/lagan/device_phone.mk)
 $(call inherit-product, vendor/sony/c6603/c6603-vendor.mk)
+$(call inherit-product, vendor/sony/yuga_blobs/yuga_blobs.mk)
 
 PRODUCT_NAME := full_c6603
 PRODUCT_DEVICE := c6603
