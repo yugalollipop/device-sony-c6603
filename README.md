@@ -28,9 +28,13 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <!-- changed repos //-->
 <remove-project name="platform/hardware/libhardware" />
 <remove-project name="platform/frameworks/native" />
+<remove-project name="platform/hardware/qcom/audio" />
 
 <project path="hardware/libhardware" name="android_hardware_libhardware" remote="pabx" revision="jb42" />
 <project path="frameworks/native"    name="android_frameworks_native"    remote="pabx" revision="jb42" />
+<project path="hardware/qcom/audio"  name="android_hardware_qcom_audio"  remote="pabx" revision="jb42" />
+<project path="vendor/sony/yuga_blobs" name="yuga_blobs"                 remote="pabx" revision="master" />
+
 <project path="kernel/sony/k253" name="kernel_253" remote="pabx" revision="master" />
 <project path="device/sony/lagan" name="device-sony-lagan" groups="device" remote="pabx" revision="master" />
 <project path="device/sony/c6603" name="device-sony-c6603" groups="device" remote="pabx" revision="master" />
@@ -38,7 +42,6 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="github" revision="cm-10.1" />
 
 </manifest>
-
 ```
 
 Download the zip file with vendor binaries from:
