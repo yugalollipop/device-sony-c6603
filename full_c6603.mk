@@ -42,4 +42,6 @@ SOMC_CFG_SENSORS_PROXIMITY_APDS9702 := yes
 
 SOMC_CFG_SENSORS_ACCEL_BMA250_INPUT := yes
 
+SOMC_CFG_SENSORS_SYSTEM_WIDE_ALS := yes
+
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
