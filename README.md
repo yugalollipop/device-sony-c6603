@@ -29,11 +29,16 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/hardware/libhardware" />
 <remove-project name="platform/frameworks/native" />
 <remove-project name="platform/hardware/qcom/audio" />
+<remove-project name="platform/packages/apps/Settings" />
+<remove-project name="platform/frameworks/base" />
 
-<project path="hardware/libhardware" name="android_hardware_libhardware" remote="pabx" revision="jb42" />
-<project path="frameworks/native"    name="android_frameworks_native"    remote="pabx" revision="jb42" />
-<project path="hardware/qcom/audio"  name="android_hardware_qcom_audio"  remote="pabx" revision="jb42" />
-<project path="vendor/sony/yuga_blobs" name="yuga_blobs"                 remote="pabx" revision="master" />
+
+<project path="hardware/libhardware"   name="android_hardware_libhardware"   remote="pabx" revision="jb42" />
+<project path="frameworks/native"      name="android_frameworks_native"      remote="pabx" revision="jb42" />
+<project path="frameworks/base"        name="android_frameworks_base"        remote="pabx" revision="jb42" />
+<project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pabx" revision="jb42" />
+<project path="hardware/qcom/audio"    name="android_hardware_qcom_audio"    remote="pabx" revision="jb42" />
+<project path="vendor/sony/yuga_blobs" name="yuga_blobs"                     remote="pabx" revision="master" />
 
 <project path="kernel/sony/k253" name="kernel_253" remote="pabx" revision="master" />
 <project path="device/sony/lagan" name="device-sony-lagan" groups="device" remote="pabx" revision="master" />
@@ -52,6 +57,7 @@ you should now have a directory named vendor/sony/lagan and vendor/sony/c6603 in
 
 * repo sync
 * lunch full_c6603-userdebug
+* cd kernel/sony/k253 && ./_build.sh && cd -
 * make
 
 To flash the images produced make sure your device is unlocked, as described on
