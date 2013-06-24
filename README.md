@@ -34,9 +34,12 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/hardware/ril" />
 <remove-project name="platform/system/core" />
 <remove-project name="platform/bionic" />
+<remove-project name="platform/packages/apps/Camera" />
 
 
-<project path="bionic"                      name="android_bionic"                remote="pabx" revision="jb42" />
+
+<project path="packages/apps/Camera"        name="android_packages_apps_camera"   remote="pabx" revision="jb42" />
+<project path="bionic"                      name="android_bionic"                 remote="pabx" revision="jb42" />
 <project path="hardware/libhardware"        name="android_hardware_libhardware"   remote="pabx" revision="jb42" />
 <project path="hardware/ril"                name="android_hardware_ril"           remote="pabx" revision="jb42" />
 <project path="frameworks/native"           name="android_frameworks_native"      remote="pabx" revision="jb42" />
@@ -55,7 +58,6 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <project path="external/busybox"            name="CyanogenMod/android_external_busybox" remote="github" revision="cm-10.1" />
 
 </manifest>
-
 ```
 
 Download the zip file with vendor binaries from:
