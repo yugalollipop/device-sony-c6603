@@ -33,26 +33,29 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/frameworks/base" />
 <remove-project name="platform/hardware/ril" />
 <remove-project name="platform/system/core" />
+<remove-project name="platform/bionic" />
 
 
-<project path="hardware/ril"           name="android_hardware_ril"           remote="pabx" revision="jb42" />
-<project path="hardware/libhardware"   name="android_hardware_libhardware"   remote="pabx" revision="jb42" />
-<project path="frameworks/native"      name="android_frameworks_native"      remote="pabx" revision="jb42" />
-<project path="frameworks/base"        name="android_frameworks_base"        remote="pabx" revision="jb42" />
-<project path="system/core"            name="android_system_core"            remote="pabx" revision="jb42" />
-<project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pabx" revision="jb42" />
-<project path="hardware/qcom/audio"    name="android_hardware_qcom_audio"    remote="pabx" revision="jb42" />
-<project path="vendor/sony/yuga_blobs" name="yuga_blobs"                     remote="pabx" revision="master" />
-<project path="kernel/sony/k253"       name="kernel_253"                     remote="pabx" revision="master" />
-<project path="external/yuga-tools"    name="yuga-tools" remote="pabx" revision="master" />
+<project path="bionic"                      name="android_bionic"                remote="pabx" revision="jb42" />
+<project path="hardware/libhardware"        name="android_hardware_libhardware"   remote="pabx" revision="jb42" />
+<project path="hardware/ril"                name="android_hardware_ril"           remote="pabx" revision="jb42" />
+<project path="frameworks/native"           name="android_frameworks_native"      remote="pabx" revision="jb42" />
+<project path="frameworks/base"             name="android_frameworks_base"        remote="pabx" revision="jb42" />
+<project path="system/core"                 name="android_system_core"            remote="pabx" revision="jb42" />
+<project path="packages/apps/Settings"      name="android_packages_apps_Settings" remote="pabx" revision="jb42" />
+<project path="hardware/qcom/audio"         name="android_hardware_qcom_audio"    remote="pabx" revision="jb42" />
+<project path="vendor/sony/yuga_blobs"      name="yuga-blobs-a806"                remote="pabx" revision="master" />
+<project path="kernel/sony/k_a806"          name="kernel_a806"                    remote="pabx" revision="jb42" />
+<project path="external/yuga-tools"         name="yuga-tools"                     remote="pabx" revision="master" />
 
-<project path="device/sony/lagan"      name="device-sony-lagan" groups="device" remote="pabx" revision="master" />
-<project path="device/sony/c6603"      name="device-sony-c6603" groups="device" remote="pabx" revision="master" />
+<project path="device/sony/lagan"           name="device-sony-lagan" groups="device" remote="pabx" revision="master" />
+<project path="device/sony/c6603"           name="device-sony-c6603" groups="device" remote="pabx" revision="master" />
 
-<project path="vendor/sony/dash"       name="DASH.git" groups="device" revision="master" remote="sony" />
-<project path="external/busybox"       name="CyanogenMod/android_external_busybox" remote="github" revision="cm-10.1" />
+<project path="vendor/sony/dash"            name="DASH.git" groups="device" revision="master" remote="sony" />
+<project path="external/busybox"            name="CyanogenMod/android_external_busybox" remote="github" revision="cm-10.1" />
 
 </manifest>
+
 ```
 
 Download the zip file with vendor binaries from:
