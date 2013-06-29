@@ -35,9 +35,10 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/system/core" />
 <remove-project name="platform/bionic" />
 <remove-project name="platform/packages/apps/Camera" />
+<remove-project name="platform/frameworks/opt/telephony" />
 
-
-
+                                                                                                            
+<project path="frameworks/opt/telephony"    name="android_frameworks_opt_telephony" remote="pabx" revision="jb42" />
 <project path="packages/apps/Camera"        name="android_packages_apps_camera"   remote="pabx" revision="jb42" />
 <project path="bionic"                      name="android_bionic"                 remote="pabx" revision="jb42" />
 <project path="hardware/libhardware"        name="android_hardware_libhardware"   remote="pabx" revision="jb42" />
