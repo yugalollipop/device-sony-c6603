@@ -17,7 +17,6 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remote  name="pabx" fetch="git://github.com/adrian-bl-yuga/" />
 <remote  name="github" fetch="git://github.com/" />
 
-<remove-project name="platform/hardware/qcom/camera" />
 <remove-project name="platform/hardware/qcom/display" />
 <remove-project name="platform/hardware/qcom/keymaster" />
 <remove-project name="platform/hardware/qcom/media" />
@@ -33,30 +32,33 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/frameworks/base" />
 <remove-project name="platform/hardware/ril" />
 <remove-project name="platform/system/core" />
-<remove-project name="platform/bionic" />
+<!-- <remove-project name="platform/bionic" /> //-->
 <remove-project name="platform/packages/apps/Camera" />
 <remove-project name="platform/frameworks/opt/telephony" />
 
-                                                                                                            
-<project path="frameworks/opt/telephony"    name="android_frameworks_opt_telephony" remote="pabx" revision="jb42" />
-<project path="packages/apps/Camera"        name="android_packages_apps_camera"   remote="pabx" revision="jb42" />
-<project path="bionic"                      name="android_bionic"                 remote="pabx" revision="jb42" />
-<project path="hardware/libhardware"        name="android_hardware_libhardware"   remote="pabx" revision="jb42" />
-<project path="hardware/ril"                name="android_hardware_ril"           remote="pabx" revision="jb42" />
-<project path="frameworks/native"           name="android_frameworks_native"      remote="pabx" revision="jb42" />
-<project path="frameworks/base"             name="android_frameworks_base"        remote="pabx" revision="jb42" />
-<project path="system/core"                 name="android_system_core"            remote="pabx" revision="jb42" />
-<project path="packages/apps/Settings"      name="android_packages_apps_Settings" remote="pabx" revision="jb42" />
-<project path="hardware/qcom/audio"         name="android_hardware_qcom_audio"    remote="pabx" revision="jb42" />
+
+<project path="frameworks/opt/telephony"    name="android_frameworks_opt_telephony" remote="pabx" revision="jb43" />
+<project path="packages/apps/Camera"        name="android_packages_apps_camera"   remote="pabx" revision="jb43" />
+<!-- <project path="bionic"                      name="android_bionic"                 remote="pabx" revision="jb43" /> //-->
+<project path="hardware/libhardware"        name="android_hardware_libhardware"   remote="pabx" revision="jb43" />
+<project path="hardware/ril"                name="android_hardware_ril"           remote="pabx" revision="jb43" />
+<project path="frameworks/native"           name="android_frameworks_native"      remote="pabx" revision="jb43" />
+<project path="frameworks/base"             name="android_frameworks_base"        remote="pabx" revision="jb43" />
+<project path="system/core"                 name="android_system_core"            remote="pabx" revision="jb43" />
+<project path="packages/apps/Settings"      name="android_packages_apps_Settings" remote="pabx" revision="jb43" />
+<project path="hardware/qcom/audio"         name="android_hardware_qcom_audio"    remote="pabx" revision="jb43" />
 <project path="vendor/sony/yuga_blobs"      name="yuga-blobs-a806"                remote="pabx" revision="master" />
 <project path="kernel/sony/k_a806"          name="kernel_a806"                    remote="pabx" revision="jb42" />
 <project path="external/yuga-tools"         name="yuga-tools"                     remote="pabx" revision="master" />
 
-<project path="device/sony/lagan"           name="device-sony-lagan" groups="device" remote="pabx" revision="master" />
-<project path="device/sony/c6603"           name="device-sony-c6603" groups="device" remote="pabx" revision="master" />
+<project path="device/sony/lagan"           name="device-sony-lagan" groups="device" remote="pabx" revision="jb43" />
+<project path="device/sony/c6603"           name="device-sony-c6603" groups="device" remote="pabx" revision="jb43" />
 
 <project path="vendor/sony/dash"            name="DASH.git" groups="device" revision="master" remote="sony" />
-<project path="external/busybox"            name="CyanogenMod/android_external_busybox" remote="github" revision="cm-10.1" />
+<project path="external/busybox"            name="CyanogenMod/android_external_busybox" remote="github" revision="cm-10.2" />
+
+<!-- google and qcom went closed-source with this in 4.3, well: the 4.2 release is good enough for us //-->
+<project path="hardware/qcom/gps"           name="platform/hardware/qcom/gps" revision="refs/tags/android-4.2.2_r1.2" />
 
 </manifest>
 ```
