@@ -32,20 +32,21 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/frameworks/base" />
 <remove-project name="platform/hardware/ril" />
 <remove-project name="platform/system/core" />
-<!-- <remove-project name="platform/bionic" /> //-->
-<remove-project name="platform/packages/apps/Camera" />
+<remove-project name="platform/packages/apps/Gallery2" />
 <remove-project name="platform/frameworks/opt/telephony" />
+<remove-project name="platform/packages/apps/VoiceDialer" />
+
 
 
 <project path="frameworks/opt/telephony"    name="android_frameworks_opt_telephony" remote="pabx" revision="jb43" />
-<project path="packages/apps/Camera"        name="android_packages_apps_camera"   remote="pabx" revision="jb43" />
-<!-- <project path="bionic"                      name="android_bionic"                 remote="pabx" revision="jb43" /> //-->
 <project path="hardware/libhardware"        name="android_hardware_libhardware"   remote="pabx" revision="jb43" />
 <project path="hardware/ril"                name="android_hardware_ril"           remote="pabx" revision="jb43" />
 <project path="frameworks/native"           name="android_frameworks_native"      remote="pabx" revision="jb43" />
 <project path="frameworks/base"             name="android_frameworks_base"        remote="pabx" revision="jb43" />
 <project path="system/core"                 name="android_system_core"            remote="pabx" revision="jb43" />
 <project path="packages/apps/Settings"      name="android_packages_apps_Settings" remote="pabx" revision="jb43" />
+<project path="packages/apps/Gallery2"      name="android_packages_apps_Gallery2" remote="pabx" revision="jb43" />
+<project path="packages/apps/VoiceDialer"   name="android_packages_apps_VoiceDialer" remote="pabx" revision="jb43" />
 <project path="hardware/qcom/audio"         name="android_hardware_qcom_audio"    remote="pabx" revision="jb43" />
 <project path="vendor/sony/yuga_blobs"      name="yuga-blobs-a806"                remote="pabx" revision="master" />
 <project path="kernel/sony/k_a806"          name="kernel_a806"                    remote="pabx" revision="jb42" />
