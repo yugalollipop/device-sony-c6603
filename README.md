@@ -55,7 +55,7 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <project path="device/sony/lagan"           name="device-sony-lagan" groups="device" remote="pabx" revision="jb43" />
 <project path="device/sony/c6603"           name="device-sony-c6603" groups="device" remote="pabx" revision="jb43" />
 
-<project path="vendor/sony/dash"            name="DASH.git" groups="device" revision="master" remote="sony" />
+<project path="vendor/sony/dash"            name="DASH"              groups="device" remote="pabx" revision="jb43" />
 <project path="external/busybox"            name="CyanogenMod/android_external_busybox" remote="github" revision="cm-10.2" />
 
 <!-- google and qcom went closed-source with this in 4.3, well: the 4.2 release is good enough for us //-->
