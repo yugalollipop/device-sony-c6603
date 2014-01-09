@@ -25,15 +25,16 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/hardware/qcom/sensors" />
 <remove-project name="platform/hardware/qcom/camera" />
 <remove-project name="platform/hardware/invensense" />
+
 <!-- changed repos //-->
 <remove-project name="platform/hardware/libhardware" />
 <remove-project name="platform/frameworks/native" />
+
 <remove-project name="platform/hardware/qcom/audio" />
 <remove-project name="platform/packages/apps/Settings" />
 <remove-project name="platform/frameworks/base" />
 <remove-project name="platform/hardware/ril" />
 <remove-project name="platform/system/core" />
-<!-- <remove-project name="platform/packages/apps/Gallery2" /> //-->
 <remove-project name="platform/frameworks/opt/telephony" />
 <remove-project name="platform/packages/apps/VoiceDialer" />
 <remove-project name="platform/system/vold" />
@@ -49,12 +50,11 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <project path="system/core"                 name="android_system_core"            remote="pabx" revision="kk44" />
 <project path="system/vold"                 name="android_system_vold"            remote="pabx" revision="kk44" />
 <project path="packages/apps/Settings"      name="android_packages_apps_Settings" remote="pabx" revision="kk44" />
-<!-- <project path="packages/apps/Gallery2"      name="android_packages_apps_Gallery2" remote="pabx" revision="kk44" /> //-->
 <project path="packages/apps/VoiceDialer"   name="android_packages_apps_VoiceDialer" remote="pabx" revision="kk44" />
 <project path="hardware/qcom/audio"         name="android_hardware_qcom_audio"    remote="pabx" revision="kk44" />
-<project path="vendor/sony/yuga_blobs"      name="yuga-blobs-a806"                remote="pabx" revision="kk44" />
-<project path="kernel/sony/k_a806"          name="kernel_a806"                    remote="pabx" revision="v3_4_LTS" />
-<project path="external/yuga-tools"         name="yuga-tools"                     remote="pabx" revision="master" />
+<project path="vendor/sony/yuga_blobs"      name="yuga-blobs-a806"                remote="pabx" revision="kk44_10_4_b_0_569" />
+<project path="kernel/sony/kernel_10_4_B_0_569"  name="kernel_10_4_B_0_569"       remote="pabx" revision="kk44" />
+<project path="external/yuga-tools"         name="yuga-tools"                     remote="pabx" revision="kk44" />
 
 <project path="device/sony/lagan"           name="device-sony-lagan" groups="device" remote="pabx" revision="kk44" />
 <project path="device/sony/c6603"           name="device-sony-c6603" groups="device" remote="pabx" revision="kk44" />
