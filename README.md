@@ -29,6 +29,7 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <!-- changed repos //-->
 <remove-project name="platform/hardware/libhardware" />
 <remove-project name="platform/frameworks/native" />
+<remove-project name="platform/frameworks/av" />
 
 <remove-project name="platform/hardware/qcom/audio" />
 <remove-project name="platform/packages/apps/Settings" />
@@ -38,22 +39,25 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/frameworks/opt/telephony" />
 <remove-project name="platform/packages/apps/VoiceDialer" />
 <remove-project name="platform/system/vold" />
+<remove-project name="platform/bionic" />
 
 
 
 
+<project path="bionic"                      name="android_bionic"                   remote="pabx" revision="kk44" /> 
 <project path="frameworks/opt/telephony"    name="android_frameworks_opt_telephony" remote="pabx" revision="kk44" />
 <project path="hardware/libhardware"        name="android_hardware_libhardware"   remote="pabx" revision="kk44" />
 <project path="hardware/ril"                name="android_hardware_ril"           remote="pabx" revision="kk44" />
 <project path="frameworks/native"           name="android_frameworks_native"      remote="pabx" revision="kk44" />
 <project path="frameworks/base"             name="android_frameworks_base"        remote="pabx" revision="kk44" />
+<project path="frameworks/av"               name="android_frameworks_av"          remote="pabx" revision="kk44" />
 <project path="system/core"                 name="android_system_core"            remote="pabx" revision="kk44" />
 <project path="system/vold"                 name="android_system_vold"            remote="pabx" revision="kk44" />
 <project path="packages/apps/Settings"      name="android_packages_apps_Settings" remote="pabx" revision="kk44" />
 <project path="packages/apps/VoiceDialer"   name="android_packages_apps_VoiceDialer" remote="pabx" revision="kk44" />
 <project path="hardware/qcom/audio"         name="android_hardware_qcom_audio"    remote="pabx" revision="kk44" />
 <project path="vendor/sony/yuga_blobs"      name="yuga-blobs-a806"                remote="pabx" revision="kk44_10_4_b_0_569" />
-<project path="kernel/sony/kernel_10_4_B_0_569"  name="kernel_10_4_B_0_569"       remote="pabx" revision="kk44" />
+<project path="kernel/sony/kernel_10_4_B_0_569"  name="kernel_10_4_B_0_569"       remote="pabx" revision="caf_3_4_lts" />
 <project path="external/yuga-tools"         name="yuga-tools"                     remote="pabx" revision="kk44" />
 
 <project path="device/sony/lagan"           name="device-sony-lagan" groups="device" remote="pabx" revision="kk44" />
