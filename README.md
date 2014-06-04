@@ -40,6 +40,7 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <remove-project name="platform/packages/apps/VoiceDialer" />
 <remove-project name="platform/system/vold" />
 <remove-project name="platform/bionic" />
+<remove-project name="platform/external/skia" />
 
 
 
@@ -56,14 +57,15 @@ Put the following snippet in .repo/local_manifests/c6603.xml
 <project path="packages/apps/Settings"      name="android_packages_apps_Settings" remote="pabx" revision="kk44" />
 <project path="packages/apps/VoiceDialer"   name="android_packages_apps_VoiceDialer" remote="pabx" revision="kk44" />
 <project path="hardware/qcom/audio"         name="android_hardware_qcom_audio"    remote="pabx" revision="kk44" />
-<project path="vendor/sony/yuga_blobs"      name="yuga-blobs-a806"                remote="pabx" revision="kk44_10_5_A_0_227" />
-<project path="kernel/sony/kernel_10_4_B_0_569"  name="kernel_10_4_B_0_569"       remote="pabx" revision="caf_3_4_lts" />
+<project path="vendor/sony/yuga_blobs"      name="yuga-blobs-a806"                remote="pabx" revision="kk44_10_5_A_0_230" />
+<project path="kernel/sony/kernel_10_4_B_0_569"  name="kernel_10_4_B_0_569"       remote="pabx" revision="kk44_3_4_lts" />
 <project path="external/yuga-tools"         name="yuga-tools"                     remote="pabx" revision="kk44" />
+<project path="external/skia"               name="android_external_skia"          remote="pabx" revision="kk44" />
 
 <project path="device/sony/lagan"           name="device-sony-lagan" groups="device" remote="pabx" revision="kk44" />
 <project path="device/sony/c6603"           name="device-sony-c6603" groups="device" remote="pabx" revision="kk44" />
 
-<project path="external/busybox"            name="android_external_busybox"       remote="pabx"  revision="kk44" />
+<project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="github" revision="stable/cm-11.0" />
 
 <!-- google and qcom went closed-source with this in 4.3, well: the 4.2 release is good enough for us //-->
 <project path="hardware/qcom/gps"           name="platform/hardware/qcom/gps" revision="refs/tags/android-4.2.2_r1.2" />
