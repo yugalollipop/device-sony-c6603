@@ -6,6 +6,7 @@ To setup a tree and build images for the device do the following:
 * Copy 'yuga.xml' to .repo/local_manifests/yuga.xml
 * repo sync
 * lunch full_c6603-userdebug
+* cd device/sony/c6603/_yuga_patches && ./patchall.sh && cd -
 * cd kernel/sony/* && ./_build.sh && cd -
 * make
 

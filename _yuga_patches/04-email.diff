@@ -1,0 +1,27 @@
+diff --git a/src/com/android/email/provider/AccountReconciler.java b/src/com/android/email/provider/AccountReconciler.java
+index 26f303f..69b8b22 100644
+--- a/src/com/android/email/provider/AccountReconciler.java
++++ b/src/com/android/email/provider/AccountReconciler.java
+@@ -237,22 +237,6 @@ public class AccountReconciler {
+                         LogUtils.w(Logging.LOG_TAG, e.toString());
+                     }
+                 }
+-            } else {
+-                // Fix up the Calendar and Contacts syncing. It used to be possible for IMAP and
+-                // POP accounts to get calendar and contacts syncing enabled.
+-                // See b/11818312
+-                final String accountType = accountManagerAccount.type;
+-                final String protocol = EmailServiceUtils.getProtocolFromAccountType(
+-                        context, accountType);
+-                final EmailServiceInfo info = EmailServiceUtils.getServiceInfo(context, protocol);
+-                if (!info.syncCalendar) {
+-                    ContentResolver.setIsSyncable(accountManagerAccount,
+-                            CalendarContract.AUTHORITY, 0);
+-                }
+-                if (!info.syncContacts) {
+-                    ContentResolver.setIsSyncable(accountManagerAccount,
+-                            ContactsContract.AUTHORITY, 0);
+-                }
+             }
+         }
+ 
