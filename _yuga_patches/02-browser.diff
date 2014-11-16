@@ -1,0 +1,14 @@
+diff --git a/src/com/android/browser/BrowserPreferencesPage.java b/src/com/android/browser/BrowserPreferencesPage.java
+index 6e6da17..766b653 100644
+--- a/src/com/android/browser/BrowserPreferencesPage.java
++++ b/src/com/android/browser/BrowserPreferencesPage.java
+@@ -98,4 +98,9 @@ public class BrowserPreferencesPage extends PreferenceActivity {
+         return intent;
+     }
+ 
++    @Override
++    protected boolean isValidFragment(String fragmentName) {
++        return true;
++    }
++
+ }

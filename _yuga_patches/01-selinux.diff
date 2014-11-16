@@ -1,0 +1,57 @@
+diff --git a/Android.mk b/Android.mk
+index 6d6aee2..d02e42c 100644
+--- a/Android.mk
++++ b/Android.mk
+@@ -114,6 +114,7 @@ $(sepolicy_policy.conf) : $(call build_policy, $(sepolicy_build_files))
+ 	$(hide) m4 -D mls_num_sens=$(PRIVATE_MLS_SENS) -D mls_num_cats=$(PRIVATE_MLS_CATS) \
+ 		-D target_build_variant=$(TARGET_BUILD_VARIANT) \
+ 		-D force_permissive_to_unconfined=$(FORCE_PERMISSIVE_TO_UNCONFINED) \
++		-D target_recovery=true \
+ 		-s $^ > $@
+ 	$(hide) sed '/dontaudit/d' $@ > $@.dontaudit
+ 
+diff --git a/domain.te b/domain.te
+index 6b025e3..4dd2e60 100644
+--- a/domain.te
++++ b/domain.te
+@@ -215,7 +215,7 @@ neverallow { domain -system_server } security_file:lnk_file { create setattr unl
+ # init starts in kernel domain and switches to init domain via setcon in
+ # the init.rc, so the setenforce occurs while still in kernel. After
+ # switching domains, there is never any need to setenforce again by init.
+-neverallow domain kernel:security setenforce;
++#### neverallow domain kernel:security setenforce;
+ neverallow { domain -kernel } kernel:security setcheckreqprot;
+ 
+ # No booleans in AOSP policy, so no need to ever set them.
+diff --git a/recovery.te b/recovery.te
+index 204c096..8d5f40e 100644
+--- a/recovery.te
++++ b/recovery.te
+@@ -4,6 +4,27 @@
+ # in neverallow rules.
+ type recovery, domain;
+ 
++  # write to /dev - fixme: we should move this to /dev/.pabx
++  allow recovery device:dir rw_dir_perms;
++  allow recovery device:file { rw_file_perms create_file_perms };
++
++  # spanwn new shells
++  allow recovery shell_exec:file { entrypoint read };
++  # change led colors
++  allow recovery proc_sysrq:file { rw_file_perms };
++
++  # read gapps file
++  allow recovery media_rw_data_file:dir { getattr search };
++  allow recovery media_rw_data_file:file { r_file_perms };
++
++  # fixme: needed?
++  allow recovery untrusted_app:dir search;
++  allow recovery kernel:dir search;
++
++  # re-disable se-linux
++  allow recovery selinuxfs:file { rw_file_perms };
++  allow recovery kernel:security setenforce;
++
+ # But the allow rules are only included in the recovery policy.
+ # Otherwise recovery is only allowed the domain rules.
+ recovery_only(`

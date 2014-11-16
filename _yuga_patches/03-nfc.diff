@@ -1,0 +1,28 @@
+diff --git a/nxp/jni/com_android_nfc_NativeNfcManager.cpp b/nxp/jni/com_android_nfc_NativeNfcManager.cpp
+index c80141e..5f268ab 100644
+--- a/nxp/jni/com_android_nfc_NativeNfcManager.cpp
++++ b/nxp/jni/com_android_nfc_NativeNfcManager.cpp
+@@ -588,9 +588,7 @@ clean_and_return:
+ }
+ 
+ static int is_user_build() {
+-    char value[PROPERTY_VALUE_MAX];
+-    property_get("ro.build.type", value, "");
+-    return !strncmp("user", value, PROPERTY_VALUE_MAX);
++    return 1;
+ }
+ 
+ /*
+@@ -1260,6 +1258,12 @@ configure:
+       nat->discovery_cfg.PollDevInfo.PollCfgInfo.DisableCardEmulation==FALSE?"CE":"",
+       nat->discovery_cfg.NfcIP_Mode, nat->discovery_cfg.Duration, ret);
+ 
++   if (ret == NFCSTATUS_FAILED && resume == true) {
++      ALOGE("NFC pabx: resuming discovery with resume = false\n");
++      resume = false;
++      goto configure;
++   }
++
+    if (ret == NFCSTATUS_BUSY && numRetries-- > 0)
+    {
+       TRACE("ConfigDiscovery BUSY, retrying");
