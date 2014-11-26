@@ -9,7 +9,6 @@
 <remove-project name="platform/hardware/qcom/power" />
 <remove-project name="platform/hardware/qcom/sensors" />
 <remove-project name="platform/hardware/invensense" />
-<remove-project name="platform/hardware/qcom/gps" />
 
 <!-- changed repos -->
 <remove-project name="platform/hardware/ril" />
@@ -30,7 +29,5 @@
 <project path="device/sony/c6603"           name="yugalollipop/device-sony-c6603" groups="device" remote="github" revision="lp50" />
 
 <project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="github" revision="cm-12.0" />
-
-<project path="hardware/qcom/gps"           name="platform/hardware/qcom/gps" revision="refs/tags/android-4.2.2_r1.2" />
 
 </manifest>
